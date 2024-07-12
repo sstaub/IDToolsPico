@@ -17,10 +17,10 @@ void setup() {
 void loop() {
 	uint8_t cid[16];
 	generateUUID(cid);
-	Serial.printf("UUID %s version %d\n", UUIDtoString(cid), verifyUUID(cid));
+	Serial.printf("UUID %s version %d\n", stringUUID(cid), verifyUUID(cid));
 	uint8_t mac[6];
 	generateMAC(mac);
-	Serial.printf("MAC %s\n", MACtoString(mac));
+	Serial.printf("MAC %s\n", stringMAC(mac));
 	delay(1000);
 	}
 ```
