@@ -1,0 +1,5 @@
+generateUUID		KEYWORD2
+verifyUUID		KEYWORD2
+printUUID		KEYWORD2
+generateMAC		KEYWORD2
+printMAC		KEYWORD2
