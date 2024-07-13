@@ -111,27 +111,27 @@ uint8_t verifyUUID(uint8_t uuid[]) {
 /**
  * @brief converts the UUID to a string
  * 
- * @param cid 
- * @param cidString 36 chars wide
+ * @param uuid 
+ * @param uuidString 36 chars wide
  */
-void printUUID(uint8_t cid[], char cidString[]) {
-	sprintf(cidString, "%02X%02X%02X%02X-%02X%02X-%02X%02X-%02X%02X-%02X%02X%02X%02X%02X%02X",
-	cid[0], cid[1], cid[2], cid[3], cid[4], cid[5], cid[6], cid[7],
-	cid[8], cid[9], cid[10], cid[11], cid[12], cid[13], cid[14], cid[15]);
+void printUUID(uint8_t uuid[], char uuidString[]) {
+	sprintf(uuidString, "%02X%02X%02X%02X-%02X%02X-%02X%02X-%02X%02X-%02X%02X%02X%02X%02X%02X",
+	uuid[0], uuid[1], uuid[2], uuid[3], uuid[4], uuid[5], uuid[6], uuid[7],
+	uuid[8], uuid[9], uuid[10], uuid[11], uuid[12], uuid[13], uuid[14], uuid[15]);
 	}
 
 /**
  * @brief converts the UUID to a string
  * 
- * @param cid 
- * @return char* cid tring 
+ * @param uuid 
+ * @return char* uuid tring 
  */
-char* printUUID(uint8_t cid[]) {
-	static char cidString[37];
-	sprintf(cidString, "%02X%02X%02X%02X-%02X%02X-%02X%02X-%02X%02X-%02X%02X%02X%02X%02X%02X",
-	cid[0], cid[1], cid[2], cid[3], cid[4], cid[5], cid[6], cid[7],
-	cid[8], cid[9], cid[10], cid[11], cid[12], cid[13], cid[14], cid[15]);
-	return cidString;
+char* printUUID(uint8_t uuid[]) {
+	static char uuidString[37];
+	sprintf(uuidString, "%02X%02X%02X%02X-%02X%02X-%02X%02X-%02X%02X-%02X%02X%02X%02X%02X%02X",
+	uuid[0], uuid[1], uuid[2], uuid[3], uuid[4], uuid[5], uuid[6], uuid[7],
+	uuid[8], uuid[9], uuid[10], uuid[11], uuid[12], uuid[13], uuid[14], uuid[15]);
+	return uuidString;
 	}
 
 /**
