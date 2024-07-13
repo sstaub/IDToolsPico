@@ -15,9 +15,9 @@ void setup() {
 	}
 
 void loop() {
-	uint8_t cid[16];
+	uint8_t uuid[16];
 	generateUUID(cid);
-	Serial.printf("UUID %s version %d\n", printUUID(cid), verifyUUID(cid));
+	Serial.printf("UUID %s version %d\n", printUUID(uuid), verifyUUID(uuid));
 	uint8_t mac[6];
 	generateMAC(mac);
 	Serial.printf("MAC %s\n", printMAC(mac));
@@ -40,8 +40,8 @@ The results is stored in a 16 bytes wide uint8_t array
 **Example**
 
 ```cpp
-uint8_t cid[16];
-generateUUID(cid);
+uint8_t uuid[16];
+generateUUID(uuid);
 ```
 
 ### **verifyUUID()**
@@ -54,13 +54,13 @@ Returns the version (1 - 7) or 0 if the UUID is not correct
 **Example**
 
 ```cpp
-uint8_t version = verifyUUID(cid);
+uint8_t version = verifyUUID(uuid);
 ```
 
 ### **printUUID()**
 Generate a formated string of the UUID
 ```cpp
-void printUUID(uint8_t cid[], char cidString[])
+void printUUID(uint8_t uuid[], char uuidString[])
 char* printUUID(uint8_t cid[])
 ```
 The returned string size has 36(37) chars and is formated as FFFFFFFF-FFFF-FFFF-FFFF-FFFFFFFFFFFF
@@ -68,7 +68,7 @@ The returned string size has 36(37) chars and is formated as FFFFFFFF-FFFF-FFFF-
 **Example**
 
 ```cpp
-Serial.println(printUUID(cid));
+Serial.println(printUUID(uuid));
 ```
 
 ## MAC address Tools
